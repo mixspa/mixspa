@@ -1,0 +1,47 @@
+{
+  "name": "mixspa",
+  "private": true,
+  "version": "0.1.0",
+  "description": "This is a library for manager micro spa app",
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">= 8"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "lerna": "lerna",
+    "clean": "rm -rf ./lib",
+    "babel": "babel src --out-dir lib --ignore 'src/**/*.spec.js'",
+    "babel:watch": "watch 'yarn babel' ./src",
+    "build": "yarn clean && yarn babel",
+    "lint": "eslint src",
+    "test": "jest --coverage --config config/jest.config.js",
+    "test:watch": "watch 'yarn test' ./src"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {
+    "lerna": "^3.19.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mixspa/mixspa.git"
+  },
+  "keywords": [
+    "spa"
+  ],
+  "author": "Cao Xiaoqi<xqcao@xqcao.com>",
+  "contributors": [
+    "Xiaoqi Cao"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mixspa/mixspa/issues"
+  },
+  "homepage": "https://github.com/mixspa/mixspa#readme"
+}
