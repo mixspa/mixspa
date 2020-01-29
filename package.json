@@ -1,0 +1,56 @@
+{
+  "name": "mixspa",
+  "private": true,
+  "version": "0.1.0",
+  "description": "This is a library for manager micro spa app",
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">= 8"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "lerna": "lerna",
+    "clean": "rm -rf ./packages/**/lib",
+    "babel": "lerna exec --parallel -- babel --root-mode upward src -d lib --ignore 'src/*.spec.js','src/**/*.spec.js'",
+    "build": "yarn clean && yarn babel",
+    "lint": "eslint ./packages/**/src",
+    "test": "jest --coverage --config config/jest.config.js",
+    "test:watch": "watch 'yarn test' ./src"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-export-default-from": "^7.8.3",
+    "@babel/plugin-proposal-export-namespace-from": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^25.1.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-jest": "^23.6.0",
+    "jest": "^25.1.0",
+    "lerna": "^3.19.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mixspa/mixspa.git"
+  },
+  "keywords": [
+    "spa"
+  ],
+  "author": "Cao Xiaoqi<xqcao@xqcao.com>",
+  "contributors": [
+    "Xiaoqi Cao"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mixspa/mixspa/issues"
+  },
+  "homepage": "https://github.com/mixspa/mixspa#readme"
+}

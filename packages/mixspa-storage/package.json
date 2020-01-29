@@ -1,0 +1,28 @@
+{
+  "name": "@mixspa/storage",
+  "version": "1.0.0",
+  "description": "A library for mixspa base storage",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mixspa/mixspa.git"
+  },
+  "author": "Cao Xiaoqi<xqcao@xqcao.com>",
+  "contributors": [
+    "Xiaoqi Cao"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mixspa/mixspa/issues"
+  },
+  "homepage": "https://github.com/mixspa/mixspa/tree/master/packages/mixspa-storage#readme"
+}
